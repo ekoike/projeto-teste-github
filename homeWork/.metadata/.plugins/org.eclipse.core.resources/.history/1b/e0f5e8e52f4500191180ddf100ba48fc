@@ -1,0 +1,48 @@
+package model;
+
+public class ItemPedido extends Super {
+
+	private String produto;
+	private double valor;
+	private int quantidade;
+	public String getProduto() {
+		return produto;
+	}
+	public void setProduto(String produto) {
+		this.produto = produto;
+	}
+	public double getValor() {
+		return valor;
+	}
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+	public int getQuantidade() {
+		return quantidade;
+	}
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+	@Override
+	public void Listar() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void Incluir() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void Alterar() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void Excluir() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

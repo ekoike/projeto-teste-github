@@ -1,0 +1,42 @@
+package model;
+
+import java.sql.Date;
+
+public abstract class Super {
+
+	private int codigo;
+	private Date dataHoraInclusao;
+	private Date dataHoraEdicao;
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public Date getDataHoraInclusao() {
+		return dataHoraInclusao;
+	}
+
+	public void setDataHoraInclusao(Date dataHoraInclusao) {
+		this.dataHoraInclusao = dataHoraInclusao;
+	}
+
+	public Date getDataHoraEdicao() {
+		return dataHoraEdicao;
+	}
+
+	public void setDataHoraEdicao(Date dataHoraEdicao) {
+		this.dataHoraEdicao = dataHoraEdicao;
+	}
+
+
+
+	
+	public Super() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

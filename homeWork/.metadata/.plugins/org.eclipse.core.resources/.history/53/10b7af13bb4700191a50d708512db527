@@ -1,0 +1,56 @@
+package br.com.vvcurso;
+
+import java.util.Scanner;
+
+import br.com.vvcurso.dataSource.PedidoDataSource;
+
+public class mainApp {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		PedidoDataSource pedidoDataSource = new PedidoDataSource();
+
+	    int opcao = 0;
+	     
+	    do {
+			System.out.println("######### PEDIDOS #########");
+			System.out.println("1 - LISTAR");
+			System.out.println("2 - ADICIONAR");
+			System.out.println("3 - EDITAR");
+			System.out.println("4 - EXCLUIR\n");
+			System.out.println("5 - SAIR");
+			System.out.println("___________________________");
+			 
+			System.out.print("ESCOLHA A OPCAO DESEJADA: ");
+			opcao = Integer.parseInt(sc.nextLine());
+
+			System.out.println("\n\n");
+			switch (opcao) {
+			case 1: 
+					pedidoDataSource.listar();
+					break;
+			case 2: 
+					pedidoDataSource.incluir();
+					break;
+			case 3: 
+					pedidoDataSource.editar(10);
+					break;
+			case 4: 
+					break;
+			case 5: 
+					break;
+			default: 
+					System.out.println("< OPCAO ERRADO >");
+			}
+			System.out.println("\n\n");
+	      } while (opcao != 5);
+	       
+	      sc.close();
+		
+
+	}
+
+}

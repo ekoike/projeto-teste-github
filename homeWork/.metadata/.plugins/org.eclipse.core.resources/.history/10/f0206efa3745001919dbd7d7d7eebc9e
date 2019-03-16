@@ -1,0 +1,63 @@
+package br.com.viavarejo.model;
+
+import java.util.ArrayList;
+
+public class Pedido extends Super {
+
+	private String nomeCliente;
+	private String nomeFilial;
+	private ArrayList<ItemPedido> itens = new ArrayList();
+
+	public String getNomeCliente() {
+		return nomeCliente;
+	}
+
+	public void setNomeCliente(String nomeCliente) {
+		this.nomeCliente = nomeCliente;
+	}
+
+	public String getNomeFilial() {
+		return nomeFilial;
+	}
+
+	public void setNomeFilial(String nomeFilial) {
+		this.nomeFilial = nomeFilial;
+	}
+
+	public ArrayList<ItemPedido> getItens() {
+		return itens;
+	}
+
+	public void setItens(ArrayList<ItemPedido> itens) {
+		this.itens = itens;
+	}
+
+	public double getValor(int codigo) {
+		// todo implementar busca para retorno
+		double valor = 0.0; 
+		return valor;
+	}
+
+	@Override
+	public void Listar() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void Incluir() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void Alterar() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void Excluir() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

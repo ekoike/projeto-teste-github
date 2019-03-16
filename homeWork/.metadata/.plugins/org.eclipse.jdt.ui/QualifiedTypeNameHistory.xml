@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.security.Timestamp"/>
+<fullyQualifiedTypeName name="model.Super"/>
+<fullyQualifiedTypeName name="model.ItemPedido"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.time.ZonedDateTime"/>
+<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="br.com.viavarejo.model.ItemPedido"/>
+<fullyQualifiedTypeName name="br.com.viavarejo.model.Pedido"/>
+<fullyQualifiedTypeName name="java.text.Format"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="br.com.viavarejo.dataSource.PedidoDataSource"/>
+<fullyQualifiedTypeName name="model.Pedido"/>
+<fullyQualifiedTypeName name="model.IPedido"/>
+<fullyQualifiedTypeName name="dataSource.copy.PedidoDataSource"/>
+<fullyQualifiedTypeName name="dataSource.PedidoDataSource"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="br.com.vvcurso.model.Pedido"/>
+</qualifiedTypeNameHistroy>

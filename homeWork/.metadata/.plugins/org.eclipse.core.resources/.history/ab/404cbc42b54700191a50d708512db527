@@ -1,0 +1,94 @@
+package br.com.vvcurso.dataSource;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import br.com.vvcurso.model.ItemPedido;
+import br.com.vvcurso.model.Pedido;
+
+public class PedidoDataSource {
+
+	private static final DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
+	private List<Pedido> pedidos = new ArrayList<Pedido>();
+	
+	public void listar() {
+
+		if (pedidos.size() == 0) {
+			System.out.println("NAO HA PEDIDOS A SEREM LISTADOS");
+		} else {
+			for (Pedido pedido : pedidos) {
+				System.out.println("************************************************");
+				System.out.println("Codigo: \t" + pedido.getCodigo());
+				System.out.println("Data inicio: \t" + sdf.format(pedido.getDataHoraInclusao()));
+				if (pedido.getDataHoraEdicao() == null) {
+					System.out.println("Data edicao: \t" + pedido.getDataHoraEdicao());
+				} else {
+					System.out.println(sdf.format("Data edicao: \t" + pedido.getDataHoraEdicao()));
+				}
+				System.out.println("Nome cliente: \t" + pedido.getNomeCliente());
+				System.out.println("Filial: \t" + pedido.getNomeFilial());
+				System.out.println("Total: \t" + pedido.getValor(codigo));
+				System.out.println("================================================");
+				System.out.println("Itens:");
+				System.out.println("================================================");
+				listarItem(pedido);
+				System.out.println("================================================");
+				System.out.println("************************************************\n");
+
+			}
+			
+		}
+	}
+
+	private void listarItem(Pedido pedido) {
+		System.out.print("QTD\t - ");
+		System.out.print("VALOR\t - ");
+		System.out.print("PRODUTO\n");
+		System.out.println("------------------------------------------------");
+
+		for (ItemPedido itemPedido : pedido.getItens()) {
+//			System.out.print(itemPedido.getCodigo()  	+ "\t - ");
+			System.out.print(itemPedido.getQuantidade() + "\t - ");
+			System.out.print(itemPedido.getValor() 		+ "\t - ");
+			System.out.print(itemPedido.getProduto() 	+ "\n");
+		}
+	}
+
+	
+	public void incluir() {
+		
+		Pedido pedido = new Pedido();
+		ItemPedido itemPedido;
+		List<ItemPedido> listaItem = new ArrayList<ItemPedido>();
+
+		pedido.setCodigo(10);
+		pedido.setDataHoraInclusao(new Date());
+		pedido.setNomeCliente("Emerson Rioji Koike");
+		pedido.setNomeFilial("São Caetano do Sul");
+		
+		itemPedido = new ItemPedido();
+		itemPedido.setCodigo(10);
+		itemPedido.setProduto("TV LCD 55 Polegadas");
+		itemPedido.setQuantidade(1);
+		itemPedido.setValor(1299.00);
+		listaItem.add(itemPedido);
+		pedido.setItens(listaItem);
+		
+		itemPedido = new ItemPedido();
+		itemPedido.setCodigo(11);
+		itemPedido.setProduto("Geladeira Panasonic 500l");
+		itemPedido.setQuantidade(1);
+		itemPedido.setValor(6299.00);
+		listaItem.add(itemPedido);
+		pedido.setItens(listaItem);
+		
+		pedidos.add(pedido);
+		
+		
+	}
+	
+}

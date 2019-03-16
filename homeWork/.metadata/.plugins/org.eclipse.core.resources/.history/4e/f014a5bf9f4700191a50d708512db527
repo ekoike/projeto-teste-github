@@ -1,0 +1,14 @@
+package dataSource;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Pedido;
+
+public class PedidoDataSource {
+	
+	private List<Pedido> pedido = new ArrayList<Pedido>();
+	
+	
+	
+}

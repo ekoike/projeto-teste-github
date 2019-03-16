@@ -1,0 +1,9 @@
+package model;
+
+public interface IPedido {
+	void Listar();
+	void Incluir();
+	void Alterar();
+	void Excluir();
+
+}

@@ -1,0 +1,8 @@
+package dataSource.copy;
+
+import model.Pedido;
+
+public class PedidoDataSource extends Pedido {
+	
+	
+}

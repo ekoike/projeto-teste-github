@@ -1,0 +1,13 @@
+package model;
+
+public abstract class ItemPedido extends Super {
+
+// nome
+// valor
+// quantidade
+	
+	private String produto;
+	private float valor;
+	private int quantidade;
+
+}

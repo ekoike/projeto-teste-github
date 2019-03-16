@@ -1,0 +1,89 @@
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import model.ItemPedido;
+import model.Pedido;
+
+public class mainApp2 {
+
+	private static final DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Date date = new Date();
+		
+		Pedido pedido = new Pedido();
+		ItemPedido itemPedido;
+		List<ItemPedido> listaItem = new ArrayList<ItemPedido>();
+
+		pedido.setCodigo(10);
+		pedido.setDataHoraInclusao(date);
+		pedido.setDataHoraEdicao(date);
+		pedido.setNomeCliente("Emerson Rioji Koike");
+		pedido.setNomeFilial("São Caetano do Sul");
+		
+		itemPedido = new ItemPedido();
+		itemPedido.setCodigo(10);
+		itemPedido.setDataHoraInclusao(date);
+		itemPedido.setProduto("TV LCD 55 Polegadas");
+		itemPedido.setQuantidade(1);
+		itemPedido.setValor(1299.00);
+		listaItem.add(itemPedido);
+		pedido.setItens(listaItem);
+		
+		itemPedido = new ItemPedido();
+		itemPedido.setCodigo(11);
+		itemPedido.setDataHoraInclusao(date);
+		itemPedido.setProduto("Geladeira Panasonic 500l");
+		itemPedido.setQuantidade(1);
+		itemPedido.setValor(6299.00);
+		listaItem.add(itemPedido);
+		pedido.setItens(listaItem);
+
+		int i;
+		int n = pedido.getItens().size();
+		System.out.printf("Percorrendo Pedido\n");
+		System.out.println(pedido.getCodigo());
+		System.out.println(sdf.format(pedido.getDataHoraInclusao()));
+		System.out.println(sdf.format(pedido.getDataHoraEdicao()));
+		System.out.println(pedido.getNomeCliente());
+		System.out.println(pedido.getNomeFilial());
+	    for (i=0; i<n; i++) {
+			System.out.println("------------------------");
+			System.out.print(pedido.getItens().get(i).getCodigo() + " - ");
+			System.out.print(pedido.getItens().get(i).getProduto() + " - ");
+			System.out.print(pedido.getItens().get(i).getQuantidade() + " - ");
+			System.out.print(pedido.getItens().get(i).getValor() + "\n");
+	    }
+	    
+/*
+	    for (ItemPedido itemPedido2 : listaItem) {
+			System.out.println(itemPedido2.getCodigo());
+			System.out.println(itemPedido2.getProduto());
+		}
+*/
+
+/*
+ 		Iterator<ItemPedido> iterator = listaItem.iterator();
+	    while (iterator.hasNext()) {
+	      System.out.printf("Posição %d- %s\n", iterator.next());
+	    }
+*/
+		
+//		System.out.println(pedido.toString());
+//		System.out.println(pedido.getItens().size());
+//		System.out.println(pedido.getItens().get(0).getCodigo());
+//		System.out.println( sdf.format(pedido.getItens().get(0).getDataHoraInclusao()));
+//		System.out.println(pedido.getItens().get(0).getProduto());
+
+//		System.out.println(pedido.getItens().get(1).getCodigo());
+//		System.out.println( sdf.format(pedido.getItens().get(1).getDataHoraInclusao()));
+//		System.out.println(pedido.getItens().get(1).getProduto());
+	
+	}
+
+}
